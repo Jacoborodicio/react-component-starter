@@ -23,10 +23,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|eot|ttf)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "static/[hash][ext][query]",
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/inline",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 12 * 1024, // 30 KB
+          },
         },
       },
       {

@@ -14,7 +14,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./demo/index.html", // Usa una plantilla HTML en demo
+      template: "./demo/index.html",
     }),
   ],
 });
